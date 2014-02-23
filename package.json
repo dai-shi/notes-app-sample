@@ -3,6 +3,11 @@
   "description": "A sample app to use the BMEAN stack with social-cms-backend",
   "version": "0.1.0",
   "author": "Daishi Kato <daishi@axlight.com>",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "jade": "~0.35.0",
     "connect-cache-manifest": "~0.2.0",
