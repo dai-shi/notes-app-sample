@@ -64,11 +64,11 @@ app.configure(function() {
     fallbacks: []
   }));
   app.use(SCB.middleware({
-    mongodb_url: process.env.MONGODB_URL || process.env.MONGOHQ_URL,
+    mongodb_url: process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URL || process.env.MONGOHQ_URL,
     session_middleware: express.session({
       secret: 'cb64d22439d1097f2297',
       store: new MongoStore({
-        url: process.env.MONGODB_URL || process.env.MONGOHQ_URL,
+        url: process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URL || process.env.MONGOHQ_URL,
       }, function() {
         console.log('session db connection.');
       }),
