@@ -25,6 +25,7 @@
 */
 
 var path = require('path');
+var http = require('http');
 var express = require('express');
 var MongoStore = require('connect-mongo')(express);
 var cacheManifest = require('connect-cache-manifest');
@@ -111,4 +112,6 @@ app.get(new RegExp('^/static/(.+)\\.html$'), function(req, res) {
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
-app.listen(process.env.PORT || 5000);
+http.createServer(app).listen(process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 5000, process.env.OPENSHIFT_NODEJS_IP, function() {
+  console.log('Express server listening.');
+});
