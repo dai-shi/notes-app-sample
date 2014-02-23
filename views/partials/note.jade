@@ -1,0 +1,22 @@
+.navbar.navbar-fixed-top.bg-texture1
+  .container
+    ul.nav.navbar-nav.pull-left
+      li
+        a(href="#/home")
+          span.glyphicon.glyphicon-chevron-left
+          span Notes
+    ul.nav.navbar-nav.navbar-right.pull-right
+      li(ng-show="note.guid")
+        a(href="#/note") New
+.navbar.navbar-fixed-bottom.bg-texture1(ng-init="mode={}", ng-hide="mode.edit")
+  .container
+    ul.nav.navbar-nav.full-width
+      li.full-width.text-center(ng-show="note.guid")
+        a(href="javascript:void(0)", ng-click="remove()")
+          span.glyphicon.glyphicon-trash
+.container
+  p.text-center(ng-show="note.guid") {{note.last_modified | date:'yyyy/MM/dd hh:mm'}}
+  form(ng-if="!note.guid")
+    textarea(rows="5", msd-elastic="\n", ng-focus="mode.edit=true", ng-blur="mode.edit=false; save();", ng-init="mode.edit=true", autofocus, ng-model="note.text")
+  form(ng-if="note.guid")
+    textarea(rows="5", msd-elastic="\n", ng-focus="mode.edit=true", ng-blur="mode.edit=false; save();", ng-model="note.text")

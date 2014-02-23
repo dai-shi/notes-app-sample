@@ -1,0 +1,17 @@
+.navbar.navbar-fixed-top.bg-texture1
+  .container
+    ul.nav.navbar-nav.pull-left(ng-hide="myself.loading")
+      li(ng-hide="myself._id")
+        a(href="javascript:void(0)", ng-click="login()") Login
+      li(ng-show="myself._id")
+        a(href="javascript:void(0)", ng-click="sync()") Sync
+    ul.nav.navbar-nav.navbar-right.pull-right
+      li
+        a(href="#/note") New
+ul.list-unstyled
+  li(ng-repeat="note in notes | orderBy:'-last_modified'")
+    a.item-holder(href="#/note/{{note.guid}}", ng-swipe-left="btn=true", ng-swipe-right="btn=false")
+      span.item-del.pull-right(ng-show="btn", ng-click="delNote(note)") Delete
+      span.item-right.glyphicon.glyphicon-chevron-right.pull-right
+      span.item-date.pull-right {{note.last_modified | date:'yyyy/MM/dd'}}
+      div.item-text {{note.text}}

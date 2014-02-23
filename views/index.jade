@@ -1,0 +1,25 @@
+!!!
+html(manifest="application.manifest", ng-app="MainModule")#ng-app
+  head
+    meta(charset="utf-8")
+    meta(content="chrome=1", http-equiv="X-UA-Compatible")
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+    link(href="static/image/apple-touch-icon.png", rel="apple-touch-icon")
+    link(href="static/image/apple-touch-startup-image-320x460.png", rel="apple-touch-startup-image")
+    link(href="static/image/apple-touch-startup-image-640x1096.png", rel="apple-touch-startup-image", media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)")
+    title Notes BMEAN
+    link(href="static/libs/css/bootstrap.css", rel="stylesheet")
+    link(href="static/main.css", rel="stylesheet")
+    script(src="static/libs/js/q.js")
+    script(src="static/libs/js/breeze.debug.js")
+    script(src="static/libs/js/breeze.dataService.mongo.js")
+    script(src="static/libs/js/angular.js")
+    script(src="static/libs/js/angular-route.js")
+    script(src="static/libs/js/angular-resource.js")
+    script(src="static/libs/js/angular-touch.js")
+    script(src="static/libs/js/elastic.js")
+    script(src="static/main.js")
+  body.bg-texture1
+    .ng-view

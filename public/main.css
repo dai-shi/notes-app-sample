@@ -1,0 +1,68 @@
+body {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.bg-texture1 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAp0lEQVQYlVWQSQ4EMQjE8v//hh08hxaR5grClOuICN1NdxMRzAzdjbsTEZgZmckREaqKiEBViQhEhJkhIgBQVU5moqp0NzODmdHdZCYigpnh7px7LzMDgJlRVbg7VYWIkJnf683X3W/h7tx73zwzOXsZES/Tyrg7mUlVcdZqjZe4YqrKzHzEiKCqXtY9XBkR+YhL3Q7NDFV9xiLy3+O9l6p6phslM/kBsjiI46kfub8AAAAASUVORK5CYII=);
+}
+
+.navbar-nav li a {
+  color: #ffcc12;
+  text-shadow: 0.08em 0.08em 0 #eee;
+}
+
+.navbar-nav li a:hover {
+  background-color: inherit;
+}
+
+.navbar-nav li a:active {
+  background-color: #eee;
+}
+
+
+.item-holder {
+  display: block;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-holder:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.item-holder:active {
+  background-color: #eee;
+}
+
+.item-del {
+  padding: 0.7em 0.5em 0.7em 0.5em;
+  color: #fff;
+  background-color: #f00;
+}
+
+.item-right {
+  padding: 0.7em 0.5em 0.7em 0;
+}
+
+.item-date {
+  padding: 0.7em 0.5em 0.7em 0;
+}
+
+.item-text {
+  padding: 0.7em 0.5em 0.7em 0.7em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.full-width {
+  width: 100%;
+}

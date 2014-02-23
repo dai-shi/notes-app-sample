@@ -1,0 +1,13 @@
+{
+  "name": "notes-app-sample",
+  "description": "A sample app to use the BMEAN stack with social-cms-backend",
+  "version": "0.1.0",
+  "author": "Daishi Kato <daishi@axlight.com>",
+  "dependencies": {
+    "jade": "~0.35.0",
+    "connect-cache-manifest": "~0.2.0",
+    "social-cms-backend": "0.4.2",
+    "express": "~3.4.8",
+    "connect-mongo": "~0.4.0"
+  }
+}
