@@ -216,7 +216,7 @@ factory('BreezeDataContext', ['$window', '$q', 'Myself', function($window, $q, M
     return Myself.then(function(myself) {
       if (myself) {
         var fetchEntitiesRemotely = function() {
-          breeze.EntityQuery.from('notes').where('owner.user_id', '==', myself._id).toType('note').using(breeze.MergeStrategy.OverwriteChanges).using(manager).execute(function(data) {
+          return breeze.EntityQuery.from('notes').where('owner.user_id', '==', myself._id).toType('note').using(breeze.MergeStrategy.OverwriteChanges).using(manager).execute(function(data) {
             // remove entities only in cache
             var results = data.results;
             angular.forEach(manager.getEntities(noteType), function(entity) {
