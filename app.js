@@ -68,6 +68,7 @@ app.configure(function() {
     session_middleware: express.session({
       secret: 'cb64d22439d1097f2297',
       store: new MongoStore({
+        db: 'admin', //for openshift
         url: process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB_URL || process.env.MONGOHQ_URL,
       }, function() {
         console.log('session db connection.');
