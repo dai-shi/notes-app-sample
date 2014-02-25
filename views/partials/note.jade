@@ -11,7 +11,7 @@
 .navbar.navbar-fixed-bottom.bg-texture1(ng-init="mode={}", ng-hide="mode.edit")
   .container
     ul.nav.navbar-nav.full-width
-      li.full-width.text-center(ng-show="note.guid")
+      li.center-block.trash-item(ng-show="note.guid")
         a(href="javascript:void(0)", ng-click="remove()")
           span.glyphicon.glyphicon-trash
 .container

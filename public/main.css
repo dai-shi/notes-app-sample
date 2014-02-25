@@ -66,3 +66,8 @@ textarea {
 .full-width {
   width: 100%;
 }
+
+.navbar-nav > li.trash-item {
+  width: 45px;
+  float: none;
+}
