@@ -111,6 +111,7 @@ controller('NoteCtrl', ['$scope', '$routeParams', '$window', '$location', 'Breez
       $scope.note = BreezeDataContext.addNote({
         text: $scope.note.text
       });
+      $location.path('/note/' + $scope.note.guid).replace();
     }
   };
 

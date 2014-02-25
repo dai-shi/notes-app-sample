@@ -63,11 +63,7 @@ textarea {
   border: none;
 }
 
-.full-width {
-  width: 100%;
-}
-
-.navbar-nav > li.trash-item {
+.navbar-nav > li.li-trash {
   width: 45px;
   float: none;
 }

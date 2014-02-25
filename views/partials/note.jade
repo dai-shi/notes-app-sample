@@ -10,8 +10,8 @@
         a(href="#/note") New
 .navbar.navbar-fixed-bottom.bg-texture1(ng-init="mode={}", ng-hide="mode.edit")
   .container
-    ul.nav.navbar-nav.full-width
-      li.center-block.trash-item(ng-show="note.guid")
+    ul.nav.navbar-nav
+      li.center-block.li-trash(ng-show="note.guid")
         a(href="javascript:void(0)", ng-click="remove()")
           span.glyphicon.glyphicon-trash
 .container
