@@ -88,7 +88,9 @@ controller('HomeCtrl', ['$scope', '$window', 'Myself', 'BreezeDataContext', func
 
   $scope.sync = function() {
     BreezeDataContext.syncNotes().then(function() {
-      $scope.notes = BreezeDataContext.getMyNotes();
+      $scope.$apply(function() {
+        $scope.notes = BreezeDataContext.getMyNotes();
+      });
     });
   };
 
@@ -232,9 +234,9 @@ factory('BreezeDataContext', ['$window', '$q', 'Myself', function($window, $q, M
         ensureScope(manager.getEntities(noteType), myself._id);
         return manager.saveChanges().then(function() {
           manager.acceptChanges(); //result doesn't include ids so manually accept
-          fetchEntitiesRemotely();
+          return fetchEntitiesRemotely();
         }, function() { //error
-          fetchEntitiesRemotely();
+          return fetchEntitiesRemotely();
         });
       }
     });
