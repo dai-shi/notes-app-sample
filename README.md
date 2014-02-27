@@ -13,9 +13,11 @@ How to run
 The running application is avalable at OpenShift server:
 <http://notesappsample-nodeangularapp.rhcloud.com/>
 
+This can be installed as an iOS Web app.
+
 How to use
 ----------
 
 - "New" is to create a new note, which is automatically saved locally.
-- "Login" is to login by Facebook account.
-- Once login'd, "Sync" is available to upload local changes to the server as well as download remote changes to the local.
+- "Login" is to login by your Facebook account.
+- Once login'd, "Sync" is available to upload local changes to the server as well as download remote changes to the local device.
