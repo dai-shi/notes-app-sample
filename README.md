@@ -10,7 +10,7 @@ work well to build offline applications.
 How to run
 ----------
 
-The running application is avalable at OpenShift server:
+The running application is available at OpenShift server:
 <http://notesappsample-nodeangularapp.rhcloud.com/>
 
 This can be installed as an iOS Web app.
