@@ -11,8 +11,10 @@ How to run
 ----------
 
 ```
-$ npm start
+$ PORT=8080 npm start
 ```
+
+<http://localhost:8080/>
 
 How to use
 ----------
